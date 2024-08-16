@@ -1,5 +1,5 @@
 .btn {
-  @apply py-3 px-7 rounded-full font-bold cursor-pointer text-lg;
+  @apply py-3 px-7 rounded-full font-bold cursor-pointer text-lg w-max inline-block;
 }
 
 .btn-primary {
