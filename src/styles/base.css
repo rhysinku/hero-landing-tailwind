@@ -137,5 +137,5 @@ body {
 }
 
 #root {
-  @apply grid grid-cols-custom-12;
+  /* @apply grid grid-cols-custom-12; */
 }
