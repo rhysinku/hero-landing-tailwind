@@ -128,7 +128,8 @@ table {
 body {
   @apply bg-white-gray
   font-primary
-  text-base;
+  text-base
+  text-slate-900;
 }
 
 .container {

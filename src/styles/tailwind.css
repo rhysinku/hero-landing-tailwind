@@ -22,7 +22,7 @@ body::before {
   inset: 0;
   margin: auto;
   display: block;
-  opacity: 0.5;
+  opacity: 0.1;
   pointer-events: none;
   z-index: 5;
 }

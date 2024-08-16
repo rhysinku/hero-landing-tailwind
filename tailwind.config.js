@@ -1,6 +1,9 @@
 // /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}", // Adjust paths as needed
+    "./public/index.html", // Include other paths where Tailwind classes might be used
+  ],
   theme: {
     extend: {
       container: {

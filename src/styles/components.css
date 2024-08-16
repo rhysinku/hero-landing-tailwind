@@ -1,3 +1,11 @@
 .btn {
-  @apply p-4 rounded-lg font-medium bg-primary text-white cursor-pointer;
+  @apply py-3 px-7 rounded-full font-bold cursor-pointer text-lg;
+}
+
+.btn-primary {
+  @apply bg-primary-900 text-white;
+}
+
+.btn-secondary {
+  @apply border-2 border-gray-500 border-solid;
 }
