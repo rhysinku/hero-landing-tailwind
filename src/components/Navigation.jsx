@@ -1,12 +1,15 @@
+const menu = ["Features", "Solutions", "Resources", "Pricing"];
+
 const Navigation = () => {
   return (
     <>
-      <nav className="w-3/6">
-        <ul className="flex justify-between">
-          <li>Features</li>
-          <li>Solutions</li>
-          <li>Resources</li>
-          <li>Pricing</li>
+      <nav>
+        <ul className="flex justify-between gap-12">
+          {menu.map((item, index) => (
+            <li className="font-bold text-xl" key={index}>
+              {item}
+            </li>
+          ))}
         </ul>
       </nav>
     </>
