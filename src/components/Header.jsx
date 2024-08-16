@@ -2,9 +2,9 @@ import Navigation from "./Navigation";
 
 const Header = () => {
   return (
-    <header>
+    <header className="pt-3">
       <div className="container">
-        <div className="flex justify-between items-center w-full bg-white rounded-md absolute top-3">
+        <div className="flex justify-between items-center  bg-white rounded-2xl  py-6 px-3 border-4 border-red-950">
           <figure className="max-w-60 w-full">
             <img src="pp.png" alt="" />
           </figure>
