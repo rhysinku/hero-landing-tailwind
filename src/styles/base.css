@@ -126,5 +126,11 @@ table {
 }
 
 body {
-  @apply bg-white-gray;
+  @apply bg-white-gray
+  font-primary
+  text-base;
+}
+
+.container {
+  @apply relative;
 }

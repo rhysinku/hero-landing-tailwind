@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header>
       <div className="container">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center w-full bg-white rounded-md absolute top-3">
           <figure className="max-w-60 w-full">
             <img src="pp.png" alt="" />
           </figure>
