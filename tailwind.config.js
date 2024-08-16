@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        "custom-12": "repeat(12, minmax(0, 1fr))",
+      },
       container: {
         center: true,
         padding: "1rem", // Optional: Add padding
