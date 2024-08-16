@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./base.css";
+
+@import "./components.css";
+@import "./utilities.css";
+
+#root {
+  min-height: 1109px;
+}
+
+body {
+  isolation: isolate;
+  @apply relative;
+}
+body::before {
+  content: "";
+  background: url(screenshot.jpg) center no-repeat;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  display: block;
+  opacity: 0.5;
+  z-index: -1;
+}
