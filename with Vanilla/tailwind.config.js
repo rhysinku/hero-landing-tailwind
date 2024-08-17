@@ -1,8 +1,10 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./*.html", // Include all HTML files in the root directory
-    "./js/**/*.js", // Include all JS files in the `js` directory and subdirectories
+    "./*.html",
+    "./css/*.css",
+    "./js/*.js",
+    "./*.{html,js}",
+    "./*.html",
   ],
   theme: {
     extend: {
@@ -11,7 +13,7 @@ module.exports = {
       },
       container: {
         center: true,
-        padding: "1rem", // Optional: Add padding
+        padding: "1rem",
         screens: {
           sm: "100%",
           md: "100%",

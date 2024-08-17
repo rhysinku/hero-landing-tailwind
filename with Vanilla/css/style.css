@@ -1,17 +1,7 @@
-@import "./base.css";
-
-@import "./components.css";
-/* @import "./utilities.css"; */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  isolation: isolate;
-  min-height: 1109px;
-  @apply relative;
-}
 body::before {
   content: "";
   background: url(/images/screenshot.jpg) center no-repeat;

@@ -4,15 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-     "live": "live-server",
-    "dev": "npx tailwindcss -i ./css/style.css -o ./css/output.css --watch",
-    "build": "NODE_ENV=production npx tailwindcss -i ./css/style.css -o ./css/output.css --minify"
+    "live": "live-server",
+    "dev": " tailwindcss -i ./css/style.css -o ./css/output.css --watch",
+    "build": "NODE_ENV=production npx tailwindcss -i ./css/style.css -o ./css/output.css --minify",
+    "dev-base": "npx tailwindcss -i ./css/base.css -i ./css/components.css -i ./css/utilities.css -o ./css/output.css --watch",
+    "build-base": "NODE_ENV=production npx tailwindcss -i ./css/base.css -i ./css/components.css -i ./css/utilities.css -o ./css/output.css --minify",
+    "postcss": "postcss ./css/style.css -o ./css/buildcss.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
     "live-server": "^1.2.2",
+    "postcss": "^8.4.41",
+    "postcss-cli": "^11.0.0",
     "tailwindcss": "^3.4.10"
+  },
+  "dependencies": {
+    "watch": "^1.0.2"
   }
 }
