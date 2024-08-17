@@ -5,24 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GKA Frontend Project with Vanilla</title>
     <link href="css/style.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
   </head>
   <body>
     <div class="body__layout container">
       <!-- Header -->
-      <header class="pt-6 col-span-12" id="header__container">
+      <header id="header__container">
         <div class="header__container">
           <figure class="header__logo">
             <img src="images/pp.png" alt="" />
           </figure>
           <nav class="header__nav">
-            <ul>
-              <li>Features</li>
-              <li>Solutions</li>
-              <li>Resources</li>
-              <li>Pricing</li>
-            </ul>
+            <div class="nav_burger">
+              <span class="patty"></span>
+              <span class="meat"></span>
+              <span class="patty"></span>
+            </div>
+            <div class="navigation">
+              <ul>
+                <li>Features</li>
+                <li>Solutions</li>
+                <li>Resources</li>
+                <li>Pricing</li>
+              </ul>
+            </div>
           </nav>
-          <div class="flex gap-5">
+          <div class="header__button">
             <a href="" class="btn btn-secondary">Login</a>
             <a href="" class="btn btn-primary">Get Started</a>
           </div>

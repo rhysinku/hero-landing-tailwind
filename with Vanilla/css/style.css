@@ -151,7 +151,7 @@ body::before {
   position: absolute;
   inset: 0;
   margin: auto;
-  display: block;
+  display: none;
   opacity: 0.1;
   pointer-events: none;
   z-index: 5;
@@ -161,8 +161,6 @@ body::before {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 1rem;
-  padding-left: 1rem;
   max-width: 1795px;
 }
 
@@ -197,6 +195,7 @@ body::before {
 #header__container {
   grid-column: span 12 / span 12;
   padding-top: 1rem;
+  padding-inline: 1rem;
 }
 .header__container {
   display: flex;
@@ -205,6 +204,8 @@ body::before {
   border-radius: 9999px;
   padding-inline: 2rem;
   padding-block: 1rem;
+  width: 94%;
+  margin-inline: auto;
   border: 1px solid var(--gray);
 }
 
@@ -212,21 +213,48 @@ body::before {
   max-width: 150px;
   width: 100%;
 }
+
+.header__button {
+  display: flex;
+  gap: 1rem;
+}
 /* Header Navigation */
 .header__nav {
 }
-.header__nav ul {
+
+.nav_burger {
+  max-width: 45px;
+  width: 100%;
+  flex-direction: column;
+  row-gap: 5px;
+  display: none;
+}
+.nav_burger span {
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: var(--primary-color);
+  border-radius: 9999px;
+}
+
+.nav_burger .patty {
+}
+.nav_burger .meat {
+}
+
+.navigation ul {
   display: flex;
   justify-content: space-between;
   column-gap: 4rem;
 }
 
-.header__nav ul li {
+.navigation ul li {
   font-weight: bold;
   font-size: 1.2rem;
 }
 /* Main Container */
 #main__container {
+  padding-inline: 1rem;
   grid-column: span 12 / span 12;
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -235,6 +263,7 @@ body::before {
 /* Hero Banner */
 .hero__banner {
   grid-column: 9/13;
+  align-self: center;
 }
 .hero__thumb {
   overflow: hidden;

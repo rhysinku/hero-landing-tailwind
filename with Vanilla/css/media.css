@@ -1,21 +1,28 @@
-@media (min-width: 100%){
+@media only screen and (max-width: 1795px) {
+}
 
-    .container{
-      max-width: 100%;
-    }
+@media only screen and (max-width: 1240px) {
+}
 
+@media only screen and (max-width: 768px) {
+  .header__button {
+    margin-left: auto;
+    margin-right: 4rem;
   }
-  @media (min-width: 1240px){
-  
-    .container{
-      max-width: 1240px;
-    }
 
+  .header__nav {
+    max-width: 45px;
+    width: 100%;
+    order: 3;
   }
-  @media (min-width: 1795px){
-  
-    .container{
-      max-width: 1795px;
-    }
-    
+  .nav_burger {
+    display: flex;
   }
+
+  .navigation {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+}
