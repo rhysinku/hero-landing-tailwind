@@ -9,7 +9,7 @@
 
 body::before {
   content: "";
-  background: url(/images/screenshot.jpg) center no-repeat;
+  background: url(/images/screenshot.jpg) top no-repeat;
   position: absolute;
   inset: 0;
   margin: auto;

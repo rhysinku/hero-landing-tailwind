@@ -19,7 +19,7 @@ module.exports = {
           md: "100%",
           lg: "1240px",
           xl: "1240px",
-          "2xl": "1770px",
+          "2xl": "1795px",
         },
       },
       fontFamily: {
