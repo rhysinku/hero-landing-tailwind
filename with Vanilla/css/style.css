@@ -7,17 +7,14 @@
 @tailwind components;
 @tailwind utilities;
 
-#root {
-  min-height: 1109px;
-}
-
 body {
   isolation: isolate;
+  min-height: 1109px;
   @apply relative;
 }
 body::before {
   content: "";
-  background: url(images/screenshot.jpg) center no-repeat;
+  background: url(/images/screenshot.jpg) center no-repeat;
   position: absolute;
   inset: 0;
   margin: auto;
