@@ -1,26 +1,33 @@
 $(document).ready(function () {
-  //   var $carousel = $(".hero__carousel");
-  //   var $cards = $(".hero__testimonial__card");
-  //   var totalCards = $cards.length;
-  //   var currentIndex = 0;
-  //   function showSlide(index) {
-  //     if (index >= totalCards) {
-  //       currentIndex = 0;
-  //     } else if (index < 0) {
-  //       currentIndex = totalCards - 1;
-  //     } else {
-  //       currentIndex = index;
-  //     }
-  //     var newTransformValue = -currentIndex * 100 + "%";
-  //     $carousel.css("transform", "translateX(" + newTransformValue + ")");
-  //   }
-  //   $(".next").click(function () {
-  //     showSlide(currentIndex + 1);
-  //   });
-  //   $(".prev").click(function () {
-  //     showSlide(currentIndex - 1);
-  //   });
-  //   setInterval(function () {
-  //     showSlide(currentIndex + 1);
-  //   }, 5000); // Change slide every 5 seconds
+  const testimonialCarousel = () => {
+    const slider = $(".hero__carousel");
+    const slide = $(".hero__testimonial__card");
+    const slideNumber = slide.length * 2;
+    const slideWidth = Math.round(slide.outerWidth());
+
+    // Getting the First Slide
+    const $firstClone = slide.first().clone();
+    const $lastClone = slide.last().clone();
+
+    // Append and prepend the clones
+    slider.append($firstClone);
+    slider.prepend($lastClone);
+
+    console.log(slideNumber);
+    let currentSlide = 0;
+
+    const updateSlider = () => {
+      const sliderTransform = -slideWidth * currentSlide;
+      slider.css("transform", `translateX(${sliderTransform}px)`);
+    };
+
+    const autoSlide = () => {
+      currentSlide = (currentSlide + 1) % slideNumber;
+      updateSlider();
+    };
+
+    setInterval(autoSlide, 3000);
+  };
+
+  //   testimonialCarousel();
 });
