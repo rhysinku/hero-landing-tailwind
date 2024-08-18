@@ -9,6 +9,8 @@ $(document).ready(function () {
     const $firstClone = slide.first().clone();
     const $lastClone = slide.last().clone();
 
+    slider.css("width", `${slideWidth * slideNumber}px`);
+
     // Append and prepend the clones
     slider.append($firstClone);
     slider.prepend($lastClone);
@@ -17,8 +19,8 @@ $(document).ready(function () {
     let currentSlide = 0;
 
     const updateSlider = () => {
-      const sliderTransform = -slideWidth * currentSlide;
-      slider.css("transform", `translateX(${sliderTransform}px)`);
+      const sliderTransform = slideWidth * currentSlide;
+      slider.css("transform", `translateX(-${sliderTransform}px)`);
     };
 
     const autoSlide = () => {
@@ -29,5 +31,34 @@ $(document).ready(function () {
     setInterval(autoSlide, 3000);
   };
 
+  //   Burger Function
+  const hamburgerButton = () => {
+    const burger = $(".nav_burger");
+    const navigation = $(".navigation");
+
+    burger.click(() => {
+      navigation.toggleClass("active");
+    });
+  };
+  const resetHamburgerButton = () => {
+    $(".nav_burger").off("click");
+  };
+
+  //   Check Screensize
+  const checkScreenSize = () => {
+    const screenWidth = $(window).width();
+
+    if (screenWidth >= 801) {
+      resetHamburgerButton();
+    } else {
+      hamburgerButton();
+    }
+  };
+
+  $(window).resize(() => {
+    checkScreenSize();
+  });
+
+  checkScreenSize();
   //   testimonialCarousel();
 });
