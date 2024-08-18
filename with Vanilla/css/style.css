@@ -316,6 +316,9 @@ body::before {
 /* Testimonial */
 
 .hero__testimonial {
+}
+
+.hero__carousel {
   display: flex;
   align-self: start;
   gap: 1rem;
