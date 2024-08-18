@@ -37,21 +37,21 @@ $(document).ready(function () {
     const navigation = $(".navigation");
 
     burger.click(() => {
+      navigation.toggleClass("nav__burger");
       navigation.toggleClass("active");
     });
-  };
-  const resetHamburgerButton = () => {
-    $(".nav_burger").off("click");
   };
 
   //   Check Screensize
   const checkScreenSize = () => {
     const screenWidth = $(window).width();
 
-    if (screenWidth >= 801) {
-      resetHamburgerButton();
+    if (screenWidth > 801) {
+      $(".navigation").removeClass("nav__burger");
+      $(".navigation").removeClass("active");
+      console.log("801");
     } else {
-      hamburgerButton();
+      console.log("800");
     }
   };
 
@@ -59,6 +59,7 @@ $(document).ready(function () {
     checkScreenSize();
   });
 
+  hamburgerButton();
   checkScreenSize();
   //   testimonialCarousel();
 });

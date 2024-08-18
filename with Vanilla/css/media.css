@@ -56,6 +56,22 @@
   .navigation {
     display: none;
   }
+
+  .nav__burger.active {
+    position: fixed;
+    width: 90%;
+    top: 0;
+    right: 0;
+    background: var(--primary-color);
+    display: block;
+    height: 100%;
+  }
+
+  .nav__burger ul {
+    flex-direction: column;
+    row-gap: 10px;
+    color: #fff;
+  }
 }
 
 @media only screen and (max-width: 768px) {

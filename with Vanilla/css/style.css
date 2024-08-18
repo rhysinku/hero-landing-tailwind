@@ -242,6 +242,14 @@ body::before {
 .nav_burger .meat {
 }
 
+.nav_burger--inside {
+  display: block;
+}
+
+.nav_burger--inside span {
+  background: #fff;
+}
+
 .navigation ul {
   display: flex;
   justify-content: space-between;
