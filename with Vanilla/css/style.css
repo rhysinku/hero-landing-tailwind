@@ -221,7 +221,7 @@ body::before {
 /* Header Navigation */
 .header__nav {
 }
-
+/* Burger */
 .nav_burger {
   max-width: 45px;
   width: 100%;
@@ -241,9 +241,11 @@ body::before {
 }
 .nav_burger .meat {
 }
-
+/* Burger Inside */
 .nav_burger--inside {
   display: block;
+  margin-left: auto;
+  margin-block: 10px;
 }
 
 .nav_burger--inside span {
@@ -260,6 +262,41 @@ body::before {
   font-weight: bold;
   font-size: 1.2rem;
 }
+
+/* Burger Navigation */
+
+.burger-active {
+  display: flex;
+  color: #fff;
+}
+.burger-active .nav__list {
+  padding-inline: 1rem;
+  padding-block: 2rem;
+}
+
+.navigation {
+  display: none;
+}
+
+.burger-active {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  background: var(--primary-color);
+  display: block;
+  height: 100%;
+}
+
+.burger-active ul {
+  flex-direction: column;
+  row-gap: 5rem;
+  padding-block: 25px;
+}
+.burger-active ul li {
+  font-size: 6rem;
+}
+
 /* Main Container */
 #main__container {
   padding-inline: 1rem;

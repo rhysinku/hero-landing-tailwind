@@ -37,8 +37,7 @@ $(document).ready(function () {
     const navigation = $(".navigation");
 
     burger.click(() => {
-      navigation.toggleClass("nav__burger");
-      navigation.toggleClass("active");
+      navigation.toggleClass("burger-active");
     });
   };
 
@@ -47,8 +46,7 @@ $(document).ready(function () {
     const screenWidth = $(window).width();
 
     if (screenWidth > 801) {
-      $(".navigation").removeClass("nav__burger");
-      $(".navigation").removeClass("active");
+      $(".navigation").removeClass("burger-active");
       console.log("801");
     } else {
       console.log("800");
