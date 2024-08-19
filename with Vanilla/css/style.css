@@ -243,7 +243,7 @@ body::before {
 }
 /* Burger Inside */
 .nav_burger--inside {
-  display: block;
+  display: none;
   margin-left: auto;
   margin-block: 10px;
 }
@@ -275,14 +275,16 @@ body::before {
 }
 
 .navigation {
-  display: none;
+  display: block;
 }
 
 .burger-active {
+  
   position: fixed;
-  width: 100%;
+  width: 100vw;
   top: 0;
   right: 0;
+  left: 0;
   background: var(--primary-color);
   display: block;
   height: 100%;
@@ -293,9 +295,7 @@ body::before {
   row-gap: 5rem;
   padding-block: 25px;
 }
-.burger-active ul li {
-  font-size: 6rem;
-}
+
 
 /* Main Container */
 #main__container {

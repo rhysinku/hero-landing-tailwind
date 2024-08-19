@@ -45,7 +45,7 @@ $(document).ready(function () {
   const checkScreenSize = () => {
     const screenWidth = $(window).width();
 
-    if (screenWidth > 801) {
+    if (screenWidth >= 801) {
       $(".navigation").removeClass("burger-active");
       console.log("801");
     } else {
