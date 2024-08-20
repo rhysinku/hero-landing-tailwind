@@ -56,13 +56,8 @@ $(document).ready(function () {
   // Theater View
   const theaterView = (selector) =>{
     $(selector).click(()=>{
-      // var videoSource = .attr('src');
-      // console.log(videoSource)
-      console.log($(this))
-    }
-
-    )
-  }
+      var videoSrc = $(this).find('iframe').attr('src');
+    })}
 
   $(window).resize(() => {
     checkScreenSize();
