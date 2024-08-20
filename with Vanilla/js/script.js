@@ -4,19 +4,20 @@ $(document).ready(function () {
     const slide = $(".hero__testimonial__card");
     const slideNumber = slide.length;
     const slideWidth = Math.round(slide.outerWidth());
+    const margin = 5;
+    const item = 3;
 
     // Getting the First Slide
-    const $firstClone = slide.first().clone();
-    const $lastClone = slide.last().clone();
+    // const $firstClone = slide.first().clone();
+    // const $lastClone = slide.last().clone();
 
     // Adjusts The Width
-    slider.css("width", `${slideWidth * slideNumber}px`);
-
+    slider.css("width", `${slideWidth * (slideNumber * margin)}px`);
+    slide.css("margin-left", `${margin}px`)
     // Append and prepend the clones
     // slider.append($firstClone);
     // slider.prepend($lastClone);
 
-    console.log(slideNumber);
     let currentSlide = 0;
 
     const updateSlider = () => {
@@ -48,11 +49,20 @@ $(document).ready(function () {
 
     if (screenWidth >= 801) {
       $(".navigation").removeClass("burger-active");
-      console.log("801");
     } else {
-      console.log("800");
     }
   };
+
+  // Theater View
+  const theaterView = (selector) =>{
+    $(selector).click(()=>{
+      // var videoSource = .attr('src');
+      // console.log(videoSource)
+      console.log($(this))
+    }
+
+    )
+  }
 
   $(window).resize(() => {
     checkScreenSize();
@@ -60,5 +70,6 @@ $(document).ready(function () {
 
   hamburgerButton();
   checkScreenSize();
-    testimonialCarousel();
+  testimonialCarousel();
+  theaterView('.hero__video')
 });

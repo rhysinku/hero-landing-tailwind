@@ -189,6 +189,8 @@ body::before {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-row-gap: 4rem;
+  overflow-x: hidden;
+  padding-bottom: 25px;
 }
 
 /* Header Part */
@@ -316,8 +318,10 @@ body::before {
   height: 100%;
 }
 
-.hero__thumb figure{width: 100%; height: 100%;}
+.hero__thumb figure{width: 100%; height: 100%; position: relative;}
 .hero__thumb iframe{width: 100%; height: 100%;}
+
+.shadow{background: #000; position: absolute; inset: 0; margin: auto; display: block; opacity: 0.5;}
 
 /* Hero Container */
 .hero__container {
@@ -370,12 +374,14 @@ body::before {
 }
 
 .hero__carousel {
-  display: flex;
-
+  padding-block: 10px;
+  display: block;
+  font-size: 0;
   gap: 1rem;
   transition: all 300ms ease-in-out;
 }
 .hero__testimonial__card {
+  display: inline-block;
   max-width: 303px;
   width: 100%;
   background: #fff;
