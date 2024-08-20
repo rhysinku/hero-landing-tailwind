@@ -54,10 +54,28 @@ $(document).ready(function () {
   };
 
   // Theater View
-  const theaterView = (selector) =>{
-    $(selector).click(()=>{
+  function theaterView(selector){
+    $(selector).click(function(){
       var videoSrc = $(this).find('iframe').attr('src');
-    })}
+      var autoplaySrc = videoSrc.includes('?') ? videoSrc + '&autoplay=1' : videoSrc + '?autoplay=1';
+      // console.log($('#theater__video').attr('src' , autoplaySrc))
+      $('#theater__video').attr('src', autoplaySrc);
+      $('#theater_view').fadeIn(400);
+    })
+
+  }
+
+
+  $('.theater__card .close').click(()=>{
+    $('#theater_view').fadeOut(400, ()=>{
+
+      $('#theater__video').attr('src', '');
+
+    })
+  })
+   
+  
+
 
   $(window).resize(() => {
     checkScreenSize();
