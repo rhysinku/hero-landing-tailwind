@@ -282,6 +282,7 @@ body::before {
 .burger-active {
   display: flex;
   color: #fff;
+  z-index: 9999999;
 }
 .burger-active .nav__list {
   padding-inline: 1rem;
@@ -402,6 +403,7 @@ body::before {
   padding-left: 2rem;
   padding-block: 3rem;
   padding-right: 1rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .testimonial__star {
   display: flex;

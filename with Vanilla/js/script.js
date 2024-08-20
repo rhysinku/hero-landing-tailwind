@@ -4,28 +4,25 @@ $(document).ready(function () {
     const slide = $(".hero__testimonial__card");
     const slideNumber = slide.length;
     const slideWidth = Math.round(slide.outerWidth());
-    const margin = 5;
-    const item = 3;
+    const margin = 15;
+    // const item = 3;
 
-    // Getting the First Slide
-    // const $firstClone = slide.first().clone();
-    // const $lastClone = slide.last().clone();
+
 
     // Adjusts The Width
     slider.css("width", `${slideWidth * (slideNumber * margin)}px`);
-    slide.css("margin-left", `${margin}px`)
-    // Append and prepend the clones
-    // slider.append($firstClone);
-    // slider.prepend($lastClone);
+    slide.css("margin-right", `${margin}px`)
+ 
 
     let currentSlide = 0;
-
+   
     const updateSlider = () => {
-      const sliderTransform = slideWidth * currentSlide;
+      const sliderTransform = slideWidth * currentSlide + margin;
       slider.css("transform", `translateX(-${sliderTransform}px)`);
     };
 
     const autoSlide = () => {
+      console.log(currentSlide)
       currentSlide = (currentSlide + 1) % slideNumber;
       updateSlider();
     };
