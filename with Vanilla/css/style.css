@@ -395,8 +395,8 @@ body::before {
 }
 .hero__testimonial__card {
   display: inline-block;
-  max-width: 303px;
-  width: 100%;
+  max-width: 279px;
+  width: 32%;
   background: #fff;
   border: 1px solid var(--gray);
   border-radius: 3rem;

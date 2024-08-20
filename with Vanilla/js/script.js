@@ -5,8 +5,25 @@ $(document).ready(function () {
     const slideNumber = slide.length;
     const slideWidth = Math.round(slide.outerWidth());
     const margin = 15;
-    // const item = 3;
+    const screenWidth = $(window).width();
+    let item = 3;
+    let currentSlide = 0;
 
+
+    // Screensize Item Show
+
+    
+    if (screenWidth >= 801) {
+      item = 1
+    }
+     else if(clientwidth <= 1200){
+      item = 2
+     }
+    else{
+      item = 3
+    }
+
+    console.log(item)
 
 
     // Adjusts The Width
@@ -14,15 +31,20 @@ $(document).ready(function () {
     slide.css("margin-right", `${margin}px`)
  
 
-    let currentSlide = 0;
    
     const updateSlider = () => {
-      const sliderTransform = slideWidth * currentSlide + margin;
-      slider.css("transform", `translateX(-${sliderTransform}px)`);
+ 
+      const sliderTransform = (slideWidth + margin) * currentSlide;
+      if(currentSlide === 0){
+        slider.css("transform", `translateX(0)`);
+      }else{
+        slider.css("transform", `translateX(-${sliderTransform}px)`);
+      }
+     
     };
 
     const autoSlide = () => {
-      console.log(currentSlide)
+      
       currentSlide = (currentSlide + 1) % slideNumber;
       updateSlider();
     };
@@ -75,6 +97,7 @@ $(document).ready(function () {
 
 
   $(window).resize(() => {
+    testimonialCarousel();
     checkScreenSize();
   });
 
